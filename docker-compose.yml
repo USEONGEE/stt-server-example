@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  whisper-stt:
+    build: .
+    container_name: faster-whisper-stt
+    environment:
+      - MODEL_SIZE=large-v3  # 환경변수로 모델 크기 설정 가능
+    command: ["python", "/app/test.py"]
